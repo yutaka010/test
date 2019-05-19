@@ -43,4 +43,7 @@ $(function() {
     $('.text2').css('opacity', '');
     $('.black1').css('background-color', '');
   });
+  $('.btn-brackets').click(function() {
+    $('#mask').delay(260).fadeOut(200)
+  });
 });
