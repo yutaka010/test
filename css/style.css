@@ -86,15 +86,15 @@ header{
 #light{
     font-size: 50px;
     color: #00a1e9;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 #dark{
   font-size: 50px;
   color: #6a1917;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 #light2{
-    color: #00a1e9;
+  color: #00a1e9;
 }
 #dark2{
   color: #6a1917;
@@ -250,7 +250,7 @@ header{
   position: relative;
   padding: 0.5em 1em;
   text-decoration: none;
-  color: #898989;
+  color: #c9c9c2;
   transition: .4s;
   margin-top:15%;
   font-size: 23px;
@@ -267,16 +267,16 @@ header{
   display: inline-block;
 }
 .btn-brackets:before {
-  border-left: solid 1px #898989;
-  border-top: solid 1px #898989;
-  border-bottom: solid 1px #898989;
+  border-left: solid 1px #c9c9c2;
+  border-top: solid 1px #c9c9c2;
+  border-bottom: solid 1px #c9c9c2;
   left: 0;
 }
 .btn-brackets:after {
   content: '';
-  border-top: solid 1px #898989;
-  border-right: solid 1px #898989;
-  border-bottom: solid 1px #898989;
+  border-top: solid 1px #c9c9c2;
+  border-right: solid 1px #c9c9c2;
+  border-bottom: solid 1px #c9c9c2;
   right: 0;
 }
 .btn-brackets:hover:before{
