@@ -16,7 +16,16 @@
 //   });
 // });
 $(function() {
-  //ボタンをクリックしたら発動
+  $(window).on('load',function () {
+    $('.move_right').delay(400).fadeIn(400)
+    $('.move_left').delay(400).fadeIn(400)
+    $(".move_left").animate({
+        "padding-right": "50px"
+    });
+    $(".move_right").animate({
+        "padding-left": "50px"
+    });
+  });
   $('li:nth-child(1)').hover(function() {
 
     //ボタンの横に要素を作成
