@@ -83,6 +83,9 @@ header{
 #choice p{
   padding-top:15%;
 }
+.move{
+  padding-right: 20px;
+}
 #light{
     font-size: 50px;
     color: #00a1e9;
