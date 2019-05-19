@@ -1,0 +1,219 @@
+
+ @import url(https://fonts.googleapis.com/css?family=Lato:300);
+ @font-face {
+	font-family: 'SourceHanSerif-Medium';
+	src: url(../SourceHanSerif-Medium.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*, *:before, *:after {
+            -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #eee;
+}
+
+html, body {
+  height: 100%;
+    background-color: #696969;
+}
+header{
+  width: 100%;
+  height: 5%;
+  background-color: black;
+}
+#loader-bg{
+  background-color: #696969;
+}
+#line {
+  width:100%; /* 横幅100% */
+  height:5px;
+  margin:40px auto;
+  background:#ddd;
+}
+.fullwidth .expand {
+  width:100%;
+  height:5px;
+  margin:0;
+  background:black;
+  position:absolute;
+  -moz-animation:fullexpand 5s ease-out;
+  -webkit-animation:fullexpand 5s ease-out;
+}
+@-moz-keyframes fullexpand {
+  0%  { width:0px;}
+  100%{ width:100%;}
+}
+@-webkit-keyframes fullexpand {
+  0%  { width:0px;}
+  100%{ width:100%;}
+}
+
+#main-nav{
+  height: 90%;
+}
+#main-nav ul, #main-nav li{
+  height: 100%;
+}
+#main-nav ul {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+
+}
+#main-nav li {
+  font-size: 0px;
+  width: 100%;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  /* center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.black2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.black1{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text1{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  height: 30%;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  font-family: "SourceHanSerif-Medium";
+}
+.text2{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  height: 30%;
+  margin: auto;
+  text-align: center;
+  opacity: 0;
+  font-family: "SourceHanSerif-Medium";
+}
+#main-nav li:nth-child(1) {
+  background-image: url("../images/riven4.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size:cover;
+  color: white;
+  transition:0.3s;
+}
+#main-nav li:nth-child(1):hover {
+
+  opacity: 0.8;
+  font-size: 32px;
+  box-shadow: 0 0 8px gray;
+}
+#main-nav li:nth-child(2) {
+  background-image: url("../images/yasuo4.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  color: white;
+}
+#main-nav li:nth-child(2):hover {
+  width: 200%;
+  opacity: 0.8;
+  font-size: 32px;
+  box-shadow: 0 0 8px gray;
+  transition:0.3s;
+}
+#main-nav li:nth-child(3) {
+  background: #b97296;
+}
+#main-nav li:nth-child(4) {
+  background: #6998b9;
+}
+
+#main-nav a {
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;
+
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#main-nav a:hover {
+
+}
+.btn-box {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  position: relative;
+  border: 2px solid #000;
+  transition: .4s;
+}
+
+.btn-box:hover {
+  border: 2px solid transparent;
+  color: #fff;
+}
+
+.btn-box:before, .btn-box:after {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transform: scale(0);
+  transition: .2s;
+}
+
+.btn-box:before {
+  border-bottom: 2px solid #FFF;
+  border-left: 2px solid #FFF;
+  transform-origin: 100% 0%;
+}
+
+.btn-box:after {
+  border-top: 2px solid #FFF;
+  border-right: 2px solid #FFF;
+  transform-origin: 0% 100%;
+}
+
+.btn-box:hover:after,
+.btn-box:hover:before {
+  transform: scale(1);
+}
+#horizon4 {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: #E74C3C;
+}
+footer{
+  width: 100%;
+  height: 5%;
+  background-color: black;
+}
