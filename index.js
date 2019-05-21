@@ -28,6 +28,18 @@ $(function() {
     $(this).css('width', '200%');
     $('.text1').css( 'opacity', '1');
     $('.black2').css('background-color', 'RGBA(0,0,0,0.5)');
+    $('.test1').textillate({
+      loop: false,
+      minDisplayTime: 2000,
+      initialDelay: 0,
+      in: {
+        effect: 'fadeInLeft',
+        delayScale: 1.5,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+    });
   }, function() {
     //初期化
     $(this).css('width', '');
@@ -36,16 +48,28 @@ $(function() {
   });
   $(function(){
     $('.text').children().addBack().contents().each(function() {
-        $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
+      $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
     });
-     setTimeout(function(){
-        $(".text").addClass("active");
+    setTimeout(function(){
+      $(".text").addClass("active");
     },100);
   });
   $('li:nth-child(2)').hover(function() {
     $(this).css('width', '200%');
     $('.text2').css('opacity', '1');
     $('.black1').css('background-color', 'RGBA(0,0,0,0.5)');
+    $('.test2').textillate({
+      loop: false,
+      minDisplayTime: 2000,
+      initialDelay: 0,
+      in: {
+        effect: 'fadeInLeft',
+        delayScale: 1.5,
+        delay: 50,
+        sync: false,
+        shuffle: false
+      }
+    });
   }, function() {
     //初期化
     $(this).css('width', '');
