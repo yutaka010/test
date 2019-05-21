@@ -140,8 +140,11 @@ header{
   height: 30%;
   margin: 0 auto;
   text-align: center;
-  opacity: 0;
+
   font-family: "SourceHanSerif-Medium";
+  display: none;
+
+
 }
 .text2{
   background-color: rgba(0, 0, 0, 0.5);
@@ -149,7 +152,7 @@ header{
   height: 30%;
   margin: auto;
   text-align: center;
-  opacity: 0;
+  display: none;
   font-family: "SourceHanSerif-Medium";
 }
 #main-nav li:nth-child(1) {

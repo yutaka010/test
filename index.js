@@ -26,12 +26,15 @@ $(function() {
   });
   $('li:nth-child(1)').hover(function() {
     $(this).css('width', '200%');
-    $('.text1').css( 'opacity', '1');
     $('.black2').css('background-color', 'RGBA(0,0,0,0.5)');
+    setTimeout(function(){
+       $('.text1').fadeToggle();
+
+    },1000);
     $('.test1').textillate({
       loop: false,
       minDisplayTime: 2000,
-      initialDelay: 0,
+      initialDelay: 1000,
       in: {
         effect: 'fadeInLeft',
         delayScale: 1.5,
@@ -43,7 +46,7 @@ $(function() {
   }, function() {
     //初期化
     $(this).css('width', '');
-    $('.text1').css('opacity', '');
+    $('.text1').css('display', 'none');
     $('.black2').css('background-color', '');
   });
   $(function(){
@@ -56,12 +59,15 @@ $(function() {
   });
   $('li:nth-child(2)').hover(function() {
     $(this).css('width', '200%');
-    $('.text2').css('opacity', '1');
     $('.black1').css('background-color', 'RGBA(0,0,0,0.5)');
+    setTimeout(function(){
+       $('.text2').fadeToggle();
+
+    },1000);
     $('.test2').textillate({
       loop: false,
       minDisplayTime: 2000,
-      initialDelay: 0,
+      initialDelay: 1000,
       in: {
         effect: 'fadeInLeft',
         delayScale: 1.5,
@@ -73,7 +79,7 @@ $(function() {
   }, function() {
     //初期化
     $(this).css('width', '');
-    $('.text2').css('opacity', '');
+    $('.text2').css('display', 'none');
     $('.black1').css('background-color', '');
   });
   $('.btn-brackets').click(function() {
