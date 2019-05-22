@@ -60,7 +60,7 @@ $(function() {
         });
         setTimeout(function(){
         $('.btn-brackets').css('opacity', '1');
-      },1800);
+      },3800);
 			});
 		} else {
 			if (displaying_percent < now_percent) {
