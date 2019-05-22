@@ -16,38 +16,89 @@
 //   });
 // });
 $(function() {
-  $('.move_right').delay(400).fadeIn(400)
-  $('.move_left').delay(400).fadeIn(400)
-  $(".move_left").animate({
-    "padding-right": "50px"
-  });
-  $(".move_right").animate({
-    "padding-left": "50px"
-  });
-  $('li:nth-child(1)').hover(function() {
-    $(this).css('width', '200%');
-    $('.black2').css('background-color', 'RGBA(0,0,0,0.5)');
-    setTimeout(function(){
-       $('.text1').fadeToggle();
+	Array.prototype.remove = function(element) {
+	  for (var i = 0; i < this.length; i++)
+	    if (this[i] == element) this.splice(i,1);
+	};
 
-    },1000);
+	function preload(images, progress) {
+		var total = images.length;
+	    $(images).each(function(){
+			var src = this;
+	        $('<img/>')
+				.attr('src', src)
+				.on('load',function() {
+					images.remove(src);
+					progress(total, total - images.length);
+				});
+	    });
+	}
+
+	var now_percent = 0;
+	var displaying_percent= 0;
+	preload([
+		'./images/yasuo4.jpg',
+		'./images/riven4.jpg'
+	], function(total, loaded){
+		now_percent = Math.ceil(100 * loaded / total);
+	});
+
+	var timer = window.setInterval(function() {
+		if (displaying_percent >= 100) {
+			window.clearInterval(timer);
+			$('#loader').delay(2000).fadeOut('slow', function() {
+				$('.content').fadeIn('slow');
+        $('.move_right').delay(400).fadeIn(400)
+        $('.move_left').delay(400).fadeIn(400)
+        $(".move_left").animate({
+          "padding-right": "50px"
+        });
+        $(".move_right").animate({
+          "padding-left": "50px"
+        });
+        setTimeout(function(){
+        $('.btn-brackets').css('opacity', '1');
+      },1800);
+			});
+		} else {
+			if (displaying_percent < now_percent) {
+				displaying_percent++;
+				$('#load-text').html(displaying_percent + '%');
+				$('#bar span').css('width', displaying_percent + '%');
+			}
+		}
+	},
+	20);	// この数字を変えるとスピードを調整できる
+});
+$(function() {
+  var timer2;
+  var timer1;
+
+  $('li:nth-child(1)').hover(function() {
+    timer1 = setTimeout(function(){
+    $('li:nth-child(1)').css('width', '200%');
+    $('.black2').css('background-color', 'RGBA(0,0,0,0.7)');
+      $('.text1').delay(1200).fadeIn();
+
     $('.test1').textillate({
       loop: false,
-      minDisplayTime: 2000,
-      initialDelay: 1000,
+      minDisplayTime: 500,
+      initialDelay: 500,
       in: {
-        effect: 'fadeInLeft',
+        effect: 'fadeInLeftBig',
         delayScale: 1.5,
         delay: 50,
         sync: false,
         shuffle: false
       }
     });
+  },300);
   }, function() {
     //初期化
     $(this).css('width', '');
     $('.text1').css('display', 'none');
     $('.black2').css('background-color', '');
+    clearTimeout(timer1);
   });
   $(function(){
     $('.text').children().addBack().contents().each(function() {
@@ -58,31 +109,32 @@ $(function() {
     },100);
   });
   $('li:nth-child(2)').hover(function() {
-    $(this).css('width', '200%');
-    $('.black1').css('background-color', 'RGBA(0,0,0,0.5)');
-    setTimeout(function(){
-       $('.text2').fadeToggle();
-
-    },1000);
+    timer2 = setTimeout(function(){
+    $('li:nth-child(2)').css('width', '200%');
+    $('.black1').css('background-color', 'RGBA(0,0,0,0.7)');
+    $('.text2').delay(1200).fadeIn();
     $('.test2').textillate({
       loop: false,
-      minDisplayTime: 2000,
-      initialDelay: 1000,
+      minDisplayTime: 500,
+      initialDelay: 500,
+      autoStart: true,
       in: {
-        effect: 'fadeInLeft',
+        effect: 'fadeInLeftBig',
         delayScale: 1.5,
         delay: 50,
         sync: false,
         shuffle: false
       }
     });
+  },300);
   }, function() {
     //初期化
+    clearTimeout(timer2);
     $(this).css('width', '');
     $('.text2').css('display', 'none');
     $('.black1').css('background-color', '');
   });
   $('.btn-brackets').click(function() {
-    $('#mask').delay(260).fadeOut(200)
+    $('#mask').delay(260).fadeOut(1000)
   });
 });

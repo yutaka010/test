@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8"/>
   <title>TEST</title>
-  <link href="assets/animate.css" rel="stylesheet">
+  <link href="./css/animate.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet" type="text/css" charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./jquery.lettering.js"></script>
@@ -11,6 +11,14 @@
 
 </head>
 <body>
+  <div id="loader">
+    <div id="load_bg">
+    <div id="load_text">
+  	Loading <span id="load-text">0%</span>
+  	<div id="bar"><span></span></div>
+    </div>
+  </div>
+  </div>
   <!-- <div id="loader-bg">
   <div id="loading">
   aa
@@ -20,9 +28,9 @@
 </div>
 </div> -->
 <!-- <div id="contents"> -->
-<header>
+<header class="content">
 </header>
-<nav id="main-nav">
+<nav id="main-nav" class="content">
   <div id="mask">
     <div id="choice">
       <p>貴方が選ぶのは<br><br><span id="light" class="move_left">「</span><span id="light">秩序の光</span><span id="light" class="move_right">」
@@ -61,7 +69,7 @@
 
 </nav>
 
-<footer>
+<footer class="content">
 </footer>
 <!-- </div> -->
 </body>
