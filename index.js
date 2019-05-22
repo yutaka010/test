@@ -48,8 +48,10 @@ $(function() {
       $('#load_text').delay(1000).fadeOut('slow')
 			$('#loader').delay(2000).fadeOut('slow', function() {
 				$('.content').fadeIn('slow');
-        $('.move_right').delay(400).fadeIn(400)
-        $('.move_left').delay(400).fadeIn(400)
+        $('#choice').delay(400).fadeIn(1400);
+        $('#c_text').delay(400).fadeIn(3400);
+        $('.move_right').delay(3000).fadeIn(400);
+        $('.move_left').delay(3000).fadeIn(400);
         $(".move_left").animate({
           "padding-right": "50px"
         });
@@ -93,7 +95,7 @@ $(function() {
         shuffle: false
       }
     });
-  },300);
+  },500);
   }, function() {
     //初期化
     clearTimeout(timer4);
@@ -130,7 +132,7 @@ $(function() {
         shuffle: false
       }
     });
-  },300);
+  },500);
   }, function() {
     //初期化
     clearTimeout(timer3);

@@ -111,6 +111,10 @@ header{
   color: white;
   margin: auto;
   margin-top: 5%;
+  display: none;
+}
+#c_text{
+  display: none;
 }
 #choice p{
   padding-top:15%;
