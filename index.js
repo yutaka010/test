@@ -42,10 +42,10 @@ $(function() {
 	], function(total, loaded){
 		now_percent = Math.ceil(100 * loaded / total);
 	});
-
 	var timer = window.setInterval(function() {
 		if (displaying_percent >= 100) {
 			window.clearInterval(timer);
+      $('#load_text').delay(1000).fadeOut('slow')
 			$('#loader').delay(2000).fadeOut('slow', function() {
 				$('.content').fadeIn('slow');
         $('.move_right').delay(400).fadeIn(400)
@@ -78,8 +78,9 @@ $(function() {
     timer1 = setTimeout(function(){
     $('li:nth-child(1)').css('width', '200%');
     $('.black2').css('background-color', 'RGBA(0,0,0,0.7)');
-      $('.text1').delay(1200).fadeIn();
-
+    timer4 = setTimeout(function(){
+      $('.text1').fadeIn();
+    },1200);
     $('.test1').textillate({
       loop: false,
       minDisplayTime: 500,
@@ -95,6 +96,7 @@ $(function() {
   },300);
   }, function() {
     //初期化
+    clearTimeout(timer4);
     $(this).css('width', '');
     $('.text1').css('display', 'none');
     $('.black2').css('background-color', '');
@@ -112,7 +114,9 @@ $(function() {
     timer2 = setTimeout(function(){
     $('li:nth-child(2)').css('width', '200%');
     $('.black1').css('background-color', 'RGBA(0,0,0,0.7)');
-    $('.text2').delay(1200).fadeIn();
+      timer3 = setTimeout(function(){
+    $('.text2').fadeIn();
+  },1200);
     $('.test2').textillate({
       loop: false,
       minDisplayTime: 500,
@@ -129,12 +133,13 @@ $(function() {
   },300);
   }, function() {
     //初期化
-    clearTimeout(timer2);
+    clearTimeout(timer3);
     $(this).css('width', '');
     $('.text2').css('display', 'none');
     $('.black1').css('background-color', '');
+    clearTimeout(timer2);
   });
   $('.btn-brackets').click(function() {
-    $('#mask').delay(260).fadeOut(1000)
+    $('#mask').delay(260).fadeOut(600)
   });
 });
