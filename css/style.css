@@ -176,11 +176,8 @@ header{
   height: 30%;
   margin: 0 auto;
   text-align: center;
-
   font-family: "SourceHanSerif-Medium";
   display: none;
-
-
 }
 .text2{
   background-color: rgba(0, 0, 0, 0.5);
@@ -190,6 +187,12 @@ header{
   text-align: center;
   display: none;
   font-family: "SourceHanSerif-Medium";
+}
+.test1{
+  overflow:hidden;
+}
+.test2{
+  overflow:hidden;
 }
 #main-nav li:nth-child(1) {
   background-image: url("../images/riven4.jpg");

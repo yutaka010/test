@@ -125,7 +125,7 @@ $(function() {
       initialDelay: 500,
       autoStart: true,
       in: {
-        effect: 'fadeInLeftBig',
+        effect: 'fadeInRightBig',
         delayScale: 1.5,
         delay: 50,
         sync: false,
